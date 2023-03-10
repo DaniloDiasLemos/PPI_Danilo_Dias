@@ -5,20 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários em html</title>
+    <meta name="description" content="Clínica ABC Health está bem equipada para cuidar da sua saúde">
+    <title>Clínica ABC Health</title>
 </head>
 
 <body>
+    <header>
+        <h1><strong>Clínica ABC Health</strong></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="galeria.html">Galeria</a>
+            </li>
+            <li>
+                <a href="cadastro.html">Cadastro</a>
+            </li>
+        </ul>
+    </nav>
+
     <main>
-        <form action="cadastraCliente.php" method="post"  enctype="multipart/form-data">
+        <h1><strong>Cadastro</strong></h1>
+        <form action="cadastraCliente.php" method="post" enctype="multipart/form-data">
             <fieldset>
-                <h1><strong>Dados Pessoais</strong></h1>
+                <h2><strong>Dados Pessoais</strong></h2>
                 <hr>
                 <br>
 
                 <div>
                     <label for="nome"><strong>Nome: </strong></label>
-                    <input type="text" id="nome" name="nome" placeholder="Fulano de Tal" required autofocus minlength="2" maxlength="50">
+                    <input type="text" id="nome" name="nome" placeholder="Fulano de Tal" required autofocus
+                        minlength="2" maxlength="50">
                 </div>
 
                 <br>
@@ -57,17 +78,17 @@
                 </div>
 
                 <br>
-                
+
                 <div>
-                    <label for="especie"><strong>Espécie: </strong></label>
-                    <input type="text" id="especie" name="especie" value="humano" readonly>
+                    <label for="naturalidade"><strong>Naturalidade: </strong></label>
+                    <input type="text" id="naturalidade" name="naturalidade" value="Brasileiro" readonly>
                 </div>
 
                 <br>
 
                 <div>
                     <fieldset>
-                        <legend>Sexo:</legend>
+                        <legend><strong>Sexo:</strong></legend>
                         <div>
                             <input type="radio" id="masculino" name="sexo" value="masculino">
                             <label for="masculino">Masculino</label>
@@ -86,7 +107,7 @@
                 <br>
 
                 <div>
-                    <label for="estadoCivil">Estado Civil: </label>
+                    <label for="estadoCivil"><strong>Estado Civil: </strong></label>
                     <select name="estadoCivil" id="estadoCivil">
                         <option value="solteiro">Solteiro</option>
                         <option value="casado">Casado</option>
@@ -96,7 +117,7 @@
             </fieldset>
             <br>
             <fieldset>
-                <h1><strong>Endereço de Entrega</strong></h1>
+                <h2><strong>Endereço de Entrega</strong></h2>
                 <hr>
                 <br>
 
@@ -108,7 +129,7 @@
                 <br>
 
                 <div>
-                    <label for="tipoLogradouro">Tipo de Logradouro: </label>
+                    <label for="tipoLogradouro"><strong>Tipo de Logradouro: </strong></label>
                     <select name="tipoLogradouro" id="tipoLogradouro" required>
                         <option value="rua">Rua</option>
                         <option value="avenida">Avenida</option>
@@ -149,12 +170,12 @@
             </fieldset>
             <br>
             <fieldset>
-                <h1><strong>Informações Adicionais</strong></h1>
+                <h2><strong>Informações Adicionais</strong></h2>
                 <hr>
                 <br>
 
                 <fieldset>
-                    <legend>Selecione Interesses: </legend>
+                    <legend><strong>Selecione Interesses: </strong></legend>
                     <div>
                         <input type="checkbox" id="filmes" name="interesses[]" value="filmes">
                         <label for="filmes">Filmes</label>
@@ -193,7 +214,7 @@
                     <input id="file" type="file">
                 </div>
 
-                <input type="hidden" name="enviado" value="enviado">
+                <input type="hidden" name="hospital1" value="hospital1">
             </fieldset>
 
             <br>
@@ -201,6 +222,9 @@
             <button type="submit">Enviar</button>
         </form>
     </main>
+    <footer>
+        <p>Av. Segismundo Pereira 333 bairro Santa Monica. (34)99999-9999.</p>
+    </footer>
 </body>
 
 </html>
