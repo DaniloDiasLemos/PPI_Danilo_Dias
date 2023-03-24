@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica ABC Health está bem equipada para cuidar da sua saúde">
+    <link rel="stylesheet" href="cadastroStyle.css">
+    <title>Clínica ABC Health</title>
+</head>
+
+<body>
+    <header>
+        <h1><strong>Clínica ABC Health</strong></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="galeria.html">Galeria</a>
+            </li>
+            <li>
+                <a href="cadastro.html">Cadastro</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1><strong>Cadastro</strong></h1>
+        <form action="cadastraCliente.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <h2><strong>Dados Pessoais</strong></h2>
+
+                <div>
+                    <label for="nome"><strong>Nome: </strong></label>
+                    <input type="text" id="nome" name="nome" placeholder="Fulano de Tal" required autofocus
+                        minlength="2" maxlength="50">
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="email"><strong>E-mail: </strong></label>
+                    <input type="email" id="email" name="email" required>
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="cpf"><strong>CPF: </strong></label>
+                    <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="idade"><strong>Idade: </strong></label>
+                    <input type="number" id="idade" name="idade" required>
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="telefone"><strong>Telefone: </strong></label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <div>
+                    <label for="dataNascimento"><strong>Data de Nascimento: </strong></label>
+                    <input type="date" id="dataNascimento" name="dataNascimento">
+                </div>
+
+                <div>
+                    <label for="naturalidade"><strong>Naturalidade: </strong></label>
+                    <input type="text" id="naturalidade" name="naturalidade" value="Brasileiro" readonly>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend><strong>Sexo:</strong></legend>
+                        <div>
+                            <input type="radio" id="masculino" name="sexo" value="masculino">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="feminino" name="sexo" value="feminino">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="outros" name="sexo" value="outros">
+                            <label for="outros">Outros</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <label for="estadoCivil"><strong>Estado Civil: </strong></label>
+                    <select name="estadoCivil" id="estadoCivil">
+                        <option value="solteiro">Solteiro</option>
+                        <option value="casado">Casado</option>
+                        <option value="divorciado">Divorciado</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2><strong>Endereço de Entrega</strong></h2>
+
+                <div>
+                    <label for="cep"><strong>CEP: </strong></label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+
+                <div>
+                    <label for="tipoLogradouro"><strong>Tipo de Logradouro: </strong></label>
+                    <select name="tipoLogradouro" id="tipoLogradouro" required>
+                        <option value="rua">Rua</option>
+                        <option value="avenida">Avenida</option>
+                        <option value="praca">Praça</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="logradouro"><strong>Logradouro: </strong></label>
+                    <input type="text" id="logradouro" name="logradouro" required>
+                </div>
+
+                <div>
+                    <label for="bairro"><strong>Bairro: </strong></label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+
+                <div>
+                    <label for="cidade"><strong>Cidade: </strong></label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+
+                <div>
+                    <label for="estado"><strong>Estado: </strong></label>
+                    <input type="text" id="estado" name="estado" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2><strong>Informações Adicionais</strong></h2>
+
+                <fieldset>
+                    <legend><strong>Selecione Interesses: </strong></legend>
+                    <div>
+                        <input type="checkbox" id="filmes" name="interesses[]" value="filmes">
+                        <label for="filmes">Filmes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="informatica" name="interesses[]" value="informatica">
+                        <label for="informatica">Informática</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="games" name="interesses[]" value="games">
+                        <label for="games">Games</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="livros" name="interesses[]" value="livros">
+                        <label for="livros">Livros</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="roupas" name="interesses[]" value="roupas">
+                        <label for="roupas">Roupas</label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label class="complementarLabel" for="informacaoComplementar">Informações Complementares: </label>
+                    <textarea id="informacaoComplementar" name="informacaoComplementar">
+                    </textarea>
+                </div>
+
+                <div>
+                    <label for="file">Envie um arquivo: </label>
+                    <input id="file" type="file">
+                </div>
+
+                <input type="hidden" name="hospital1" value="hospital1">
+            </fieldset>
+
+            <p><button type="submit">Enviar</button></p>
+        </form>
+    </main>
+    <footer>
+        <p>Av. Segismundo Pereira 333 bairro Santa Monica. (34)99999-9999.</p>
+    </footer>
+</body>
+
+</html>
