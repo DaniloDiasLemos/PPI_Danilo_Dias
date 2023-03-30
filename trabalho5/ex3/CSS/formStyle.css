@@ -1,0 +1,39 @@
+main {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    text-align: center;
+}
+
+label {
+    color: #969191;
+    display: block;
+    margin-bottom: 8px;
+}
+
+body {
+    background-color: #969191;
+}
+
+div {
+    padding: 100px;
+    visibility: hidden;
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+    color: white;
+    background-color: lightgreen;
+}
+
+input {
+    margin-bottom: 5px;
+    padding: 5px;
+}
