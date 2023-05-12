@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <h1>Exemplo 1</h1>
+    <p>Ao clicar no botão, dispara a função 'loadExtraContent' que por sua vez envia um GET para buscar o conteudo do
+        arquivo 'conteudoAdicional.html'
+        ao terminar a requisição colocar a resposta texto no html do primeiro elemento que possui id 'divDemo'. Se
+        ocorrer algum erro na rede é mostrado no console
+        a mensagem 'Erro de rede - requisição não finalizada'
+    </p>
+    <h1>Exemplo 2</h1>
+    <p>
+        Ao soltar a tecla é acionada a função buscarCidade passando o valor do 'inputCep'. Esta função verifica se a
+        string possui exatamente
+        9 caracteres, se não ele dá return e não acontece nada, se sim é mandado um GET para o arquivo php
+        'busca-cidade.php' com parametro cep
+        no arquivo php atraves do $_GET acessa o parametro cep e checa se o valor corresponde a alguma cidade, se não
+        muda-se a resposta http para 404
+        e imprime a mensagem '$cep is not available'. Se a resposta for 200, colcoa o responseText no elemento span,
+        se não coloca string vazia '' e mostra
+        no console o status, texto do status e texto da resposta
+    </p>
+    <h1>Exemplo 3</h1>
+    <p>
+        Manda um GET para o arquivo 'busca-endereco.php' com parametro 'cep' e transforma o responseType em 'json'.
+        Neste arquivo tem uma classe Endereco que
+        é preenchida dependendo
+        do 'cep' que foi passado. É alterado o content-type do header da resposta para 'application/json' e então
+        transforma o objeto php em string json.
+        Esta string json é automaticamente transformada em objeto js que é utilizado para preencher o formulário.
+    </p>
+    <h1>Exemplo 4</h1>
+    <p>
+        Manda um GET para o arquivo 'busca-endereco.php' com parametro 'cep'. Neste arquivo tem uma classe Endereco que
+        é preenchida dependendo
+        do 'cep' que foi passado. É alterado o content-type do header da resposta para 'application/json' e então
+        transforma o objeto php em string json.
+        Se o codigo de status for diferente de 200 é dado uma mensagem de erro, se não tenta converter a string JSON
+        para objeto js.
+        Se falhar é dado uma mensagem de erro. Por fim utiliza o objeto js para preencher formulário
+    </p>
+    <h1>Exemplo 5</h1>
+    <p>
+        Ao soltar a tecla ativa a função buscaEndereco passando o valor do input. Se o cep tiver 9 caracteres manda um
+        POST para o arquivo 'busca-endereco.php'
+        altera o content-type do header da requisição para 'application/json', converte o objeto js para string json e
+        envia com a requisição.
+        No arquivo php converte a string json da requisação em objeto php e verifica o valor de cep para construir o
+        objeto Endereco de acordo
+        com o cep.É alterado o content-type do header da resposta para 'application/json' e então
+        transforma o objeto php em string json. A resposta é transformada em objeto js e o formulario é preenchido.
+    </p>
+    <h1>Exemplo 6</h1>
+    <p>
+        Ao clicar no botão irá disparar a funçãp sendForm que vai mandar um POST para o arquivo action do form
+        (checkLogin.php). Vai mudar o
+        responseType para 'json' e envia o formulario como FormData na requisição. No arquivo php resgata os valores
+        de email e senha atraves
+        do $_POST, então faz uma validação e constrói o objeto RequestResponse de acordo com a validação.
+        É alterado o content-type do header da resposta para 'application/json' e então transforma o objeto php em
+        string json.
+        A resposta chega já transformada em objeto js, se o usuario tem permissão ele é redirecionado a pagina que
+        está em detail (home.html)
+        se não mostra uma mensagem de falha no login
+    </p>
+</body>
+
+</html>

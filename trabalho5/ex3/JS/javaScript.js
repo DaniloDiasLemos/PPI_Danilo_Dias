@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function showMessage(msg) {
-    const div = document.querySelector("div");
-    div.textContent = msg;
+    const p = document.querySelector("p");
+    p.textContent = msg;
 }
-
-window.addEventListener('load', showMessage)

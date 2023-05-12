@@ -12,7 +12,6 @@ main {
 }
 
 label {
-    color: #969191;
     display: block;
     margin-bottom: 8px;
 }
@@ -21,10 +20,24 @@ body {
     background-color: #969191;
 }
 
+p {
+    color: white;
+    overflow: auto;
+}
+
 div {
-    padding: 100px;
+    padding: 50px 50px 10px 50px;
     visibility: hidden;
     text-align: center;
+    border: solid 1px;
+    box-shadow: 5px 5px 5px black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border-radius: 10px;
+    width: 50%;
 }
 
 button {
@@ -36,4 +49,9 @@ button {
 input {
     margin-bottom: 5px;
     padding: 5px;
+}
+
+#okButton {
+    margin-top: 50px;
+    background-color: blueviolet;
 }
